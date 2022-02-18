@@ -1,7 +1,7 @@
 # CMPS 2200  Recitation 01
 
-**Name (Team Member 1):**_________________________  
-**Name (Team Member 2):**_________________________
+**Name (Team Member 1):** Keith J Mitchell  
+**Name (Team Member 2):** 
 
 In this recitation, we will investigate asymptotic complexity. Additionally, we will get familiar with the various technologies we'll use for collaborative coding.
 
@@ -48,11 +48,15 @@ We'll compare the running times of `linear_search` and `binary_search` empirical
 
 - [ ] 4. Describe the worst case input value of `key` for `linear_search`? for `binary_search`? 
 
-**TODO: your answer goes here**
+The worst case input value of 'key' for linear_search would be a key that does not exist in the list as the linear_search function will then have to check the entire list for the key which could take a lot of time.
+
+The worst case input value of 'key' for binary_search would also be a key that does not exist in the list as the binary_search function will take log base 2 of the length of the list in order to find, or not find in this case, the key. This number would be rounded down to nearest integer.
 
 - [ ] 5. Describe the best case input value of `key` for `linear_search`? for `binary_search`? 
 
-**TODO: your answer goes here**
+The best case input value of 'key' in linear_search would be a key equal to the first item in the list. The linear_search function would find the key immediately as it begins searching at the front of the list.
+
+The best case input value of 'key' for binary_search would be a key equal to the value found directly in the middle of the array as binary_search looks in the middle of the array in order to halve it if it does not find the key in the middle, making the middle value the ideal value for a key to be.
 
 - [ ] 6. Complete the `time_search` function to compute the running time of a search function. Note that this is an example of a "higher order" function, since one of its parameters is another function.
 
@@ -62,11 +66,23 @@ We'll compare the running times of `linear_search` and `binary_search` empirical
 
 **TODO: add your timing results here**
 
+NO RESULTS PRINT???? It will not let me call `print_results(compare_search())` and when I believe I find a way around it, it simply gives me tests passed...Help needed
+
 - [ ] 9. The theoretical worst-case running time of linear search is $O(n)$ and binary search is $O(log_2(n))$. Do these theoretical running times match your empirical results? Why or why not?
 
 **TODO: your answer goes here**
 
-- [ ] 10. Binary search assumes the input list is already sorted. Assume it takes $\Theta(n^2)$ time to sort a list of length $n$. Suppose you know ahead of time that you will search the same list $k$ times. 
-  + What is worst-case complexity of searching a list of $n$ elements $k$ times using linear search? **TODO: your answer goes here**
-  + For binary search? **TODO: your answer goes here**
-  + For what values of $k$ is it more efficient to first sort and then use binary search versus just using linear search without sorting? **TODO: your answer goes here**
+THERE IS NO WAY FOR ME TO KNOW???? My results never print. I cannot find a way to get the print statements to execute and display results.
+
+- [ ] 10. Binary search assumes the input list is already sorted. Assume it takes $\Theta(n^2)$ time to sort a list of length $n$. Suppose you know ahead of time that you will search the same list $k$ times.
+
+
+  + What is worst-case complexity of searching a list of $n$ elements $k$ times using linear search? 
+  
+        O(k * n) would be the worst case when looking through k times as this is the worst case linear search scenario multiplied by the amount of times looked through
+  + For binary search? 
+  
+        O((n + k) * log base 2 (n)) would be the worst case for binary search
+  + For what values of $k$ is it more efficient to first sort and then use binary search versus just using linear search without sorting? 
+  
+        If one is searching either one time or another low integer such as 2 or possibly 3 times, linear search tends to yield a quicker outcome, whereas when searching multiple times, sorting and binary will be the time sensible method.
