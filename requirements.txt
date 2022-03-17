@@ -1,3 +1,2 @@
 ipython
 pytest==5.0.0
-tabulate
